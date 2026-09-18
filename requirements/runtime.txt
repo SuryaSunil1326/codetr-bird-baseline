@@ -1,0 +1,14 @@
+matplotlib
+numpy
+pycocotools
+six
+terminaltables
+fairscale
+scipy
+yapf
+timm
+fvcore
+tensorboard
+einops
+rich
+shapely

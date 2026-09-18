@@ -1,0 +1,14 @@
+*.pth
+*.pt
+work_dirs/*
+!work_dirs/.gitkeep
+data/**/*.jpg
+data/**/*.png
+data/**/*.json
+__pycache__/
+*.egg-info/
+.venv/
+.env
+.idea/
+.vscode/
+_prep/
