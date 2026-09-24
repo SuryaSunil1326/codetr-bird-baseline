@@ -1,6 +1,27 @@
+This repository bundles third-party code. Each component keeps its own license.
+
+mmdet/
+  MMDetection v2.25.3, Copyright 2018-2023 OpenMMLab. Licensed under the
+  Apache License, Version 2.0. See mmdet/LICENSE.
+  https://github.com/open-mmlab/mmdetection
+  This copy includes the modifications from Sense-X/Co-DETR listed in
+  mmdet/PATCHES.md.
+
+projects/models/ and the Co-DETR additions to mmdet/
+  Co-DETR, Copyright (c) 2022 SenseTime X-Lab. Licensed under the MIT License
+  (text below).
+  https://github.com/Sense-X/Co-DETR
+
+Everything else (README, projects/configs/my_exps/, tooling around the above)
+is Copyright (c) 2026 SuryaSunil1326 under the MIT License, see LICENSE.
+
+
+Co-DETR license text
+--------------------
+
 MIT License
 
-Copyright (c) 2026 SuryaSunil1326
+Copyright (c) 2022 SenseTime X-Lab
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

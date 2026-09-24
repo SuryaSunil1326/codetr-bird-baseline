@@ -1,6 +1,6 @@
 # dataset settings
 dataset_type = 'CocoDataset'
-data_root = 'data/new_dataset_26'
+data_root = 'data'
 
 classes = ("bird",)
 
@@ -37,19 +37,19 @@ data = dict(
     train=dict(
         type=dataset_type,
         ann_file=data_root + '/annotations/instances_train.json',
-        img_prefix=data_root + '/train/',
+        img_prefix=data_root + '/images/train/',
 	classes=classes,
         pipeline=train_pipeline),
     val=dict(
         type=dataset_type,
         ann_file=data_root + '/annotations/instances_val.json',
-        img_prefix=data_root + '/val/',
+        img_prefix=data_root + '/images/val/',
 	classes=classes,
         pipeline=test_pipeline),
     test=dict(
         type=dataset_type,
         ann_file=data_root + '/annotations/instances_val.json',
-        img_prefix=data_root + '/val',
+        img_prefix=data_root + '/images/val/',
 	classes=classes,
         pipeline=test_pipeline))
 evaluation = dict(interval=1, metric=['bbox', 'segm'])
