@@ -14,6 +14,10 @@ Needs Docker, an NVIDIA driver and the NVIDIA container toolkit. The first build
 
 COCO-format annotations and images go under `data/`, layout in `data/README.md`. `python tools/make_dummy_data.py` writes a tiny synthetic set there to check the pipeline (it will not overwrite existing annotations).
 
+## Starting weights
+
+Required before training. Download them as described in `checkpoints/README.md` (Sense-X Co-DINO ViT-L, COCO instance).
+
 ## Training
 
     python tools/train.py projects/configs/my_exps/co_dino_5scale_vit_large_bird_instance.py --work-dir work_dirs/run
@@ -23,10 +27,6 @@ Needs a large-memory GPU: the shipped config (AdamW, 7 images per GPU) does not 
 ## Inference
 
     python tools/test.py projects/configs/my_exps/co_dino_5scale_vit_large_bird_instance.py work_dirs/run/latest.pth --eval bbox segm
-
-## Starting weights
-
-See `checkpoints/README.md` (Sense-X Co-DINO ViT-L, COCO instance).
 
 ## License
 
