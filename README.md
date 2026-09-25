@@ -1,26 +1,33 @@
 # codetr-bird-baseline
 
-Single-class ("bird") CoDETR fine-tune baseline for student projects. Co-DINO 5-scale with ViT-Large backbone, instance segmentation head.
+Co-DINO (ViT-Large, 5-scale) instance segmentation baseline for single-class bird detection, built on Co-DETR and MMDetection 2.25.3.
 
 ## Setup
 
-    pip install -v -e .
-    pip install -r requirements/runtime.txt
+    docker build -t codetr-bird .
+    docker run --gpus all -it --rm --shm-size=8g -v "$PWD":/workspace codetr-bird
+    python tools/smoke_test.py
 
-requires torch + torchvision installed separately (matching your CUDA version), and mmcv-full (see requirements/mminstall.txt).
+Needs Docker, an NVIDIA driver and the NVIDIA container toolkit. The first build compiles mmcv-full from source (about 20 minutes). Run everything below inside the container.
 
 ## Data
 
-Place COCO-format annotations and images under `data/`. See `data/README.md` for the expected layout.
+COCO-format annotations and images go under `data/`, layout in `data/README.md`. `python tools/make_dummy_data.py` writes a tiny synthetic set there to check the pipeline (it will not overwrite existing annotations).
 
-## Pretrained weights
-
-Download `coco_dino_5scale_vit_large_coco_instance.pth` from the Sense-X Co-DETR release and place it in `checkpoints/`.
-
-## Train
+## Training
 
     python tools/train.py projects/configs/my_exps/co_dino_5scale_vit_large_bird_instance.py --work-dir work_dirs/run
 
-## Test
+Needs a large-memory GPU: the shipped config (AdamW, 7 images per GPU) does not fit in 6 GB even at batch size 1.
+
+## Inference
 
     python tools/test.py projects/configs/my_exps/co_dino_5scale_vit_large_bird_instance.py work_dirs/run/latest.pth --eval bbox segm
+
+## Starting weights
+
+See `checkpoints/README.md` (Sense-X Co-DINO ViT-L, COCO instance).
+
+## License
+
+MIT for this repo's own code. mmdet/ is Apache-2.0 and Co-DETR is MIT, see NOTICE.
