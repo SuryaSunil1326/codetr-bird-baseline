@@ -37,7 +37,7 @@ Listed by diffing against the upstream v2.25.3 tarball; paths are relative to `m
 
 Compared against the same commit:
 
-- `datasets/coco.py`: one added `print("[DEBUG] ...")` line inside the annotation loop. Not from Co-DETR.
+- `mmdet/` is identical to upstream apart from this file and `LICENSE`.
 - `projects/models/swin_transformer.py` is not included and `projects/models/__init__.py` does not
   import it (the ViT config does not use Swin, and it depends on `mmcv_custom/`, which is also not included).
 - `tools/train.py`, `tools/test.py` and the other `projects/models/` files are identical to upstream.
