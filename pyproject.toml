@@ -1,0 +1,23 @@
+[project]
+name = "codetr-bird-baseline"
+version = "0.1.0"
+description = "Co-DINO bird instance segmentation baseline"
+requires-python = ">=3.10"
+dependencies = [
+    "huggingface-hub>=0.36.0",
+    "datasets>=2.14.0",
+    "pycocotools>=2.0.7",
+    "Pillow>=10.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv]
+package = false

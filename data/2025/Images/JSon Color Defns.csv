@@ -1,0 +1,98 @@
+Species Code,Desc,Color
+AMAVA,American Avocet Adult,Lime
+AMOYA,American Oystercatcher,Fuchsia
+AWPEA,American White Pelican,Purple
+BCNHA,Black-Crowned Night Heron Adult,Teal
+BCNHC,Black-Crowned Night Heron Chick,Teal
+BCNHJ,Black-Crowned Night Heron Juvenile,Teal
+BEKIA,Belted Kingfisher Adult,LtGray
+BLSKA,Black Skimmer Adult,Black
+BLSKC,Black Skimmer Chick,Black
+BNSTA,Black-necked Stilt,Lime
+BRPEA,Brown Pelican Adult,Red
+BRPEC,Brown Pelican Chick,Red
+BRPEE,Brown Pelican Egg,Red
+BRPEF,Brown Pelican Flying,Red
+BRPEJ,Brown Pelican Juvenile,Red
+BRPEN,Brown Pelican Nest,Red
+CAEGA,Cattle Egret Adult,Silver
+CAEGF,Cattle Egret Flying,Silver
+CATEA,Capsian Tern Adult,Red
+CATENA,Capsian Tern Nesting,Maroon
+CATEC,Caspian Tern Chick,Maroon
+CRCAA,Crested Caracara Adult,Black
+DCCOA,Double-Crested Cormorant Adult,Black
+DCCOC,Double-Crested Cormorant Chick,
+FOTEA,Forster's Tern Adult,Green
+FOTENA,Forster's Tern - Nesting,Olive
+GBHEA,Great Blue Heron Adult,Blue
+GBHEC,Great Blue Heron Chick,Blue
+GBHEE,Great Blue Heron Egg,Blue
+GBHEF,Great Blue Heron Flying,Blue
+GBHEJ,Great Blue Heron Juvenile,Blue
+GBHEN,Great Blue Heron Nest,Blue
+GBTEA,Gull-Billed Tern Adult,Blue
+GBTENA,Gull-Billed Tern - Nesting,Cyan
+GREGA,Great Egret Adult,Lime
+GREGC,Great Egret Chick,Lime
+GREGE,Great Egret Egg,Lime
+GREGF,Great Egret Flying,Lime
+GREGN,Great Egret Nest,Lime
+LAGUA,Laughing Gull Adult,Maroon
+LAGUC,Laughing Gull Chick,Red
+LAGUF,Laughing Gull Flying,Maroon
+LAGUJ,Laughing Gull Juvenile,Maroon
+LBHE,Little Blue Heron Adult,Yellow
+LWBAA,Large White Bird Adult Above Canopy,Red
+LWBAC,Large White Bird Chick Above Canopy,Red
+LWBAN,Large White Bird Nest Above Canopy,Red
+LWBBA,Large White Bird Adult Below Canopy,Yellow
+LWBBC,Large White Bird Chick Below Canopy,Yellow
+LWBBN,Large White Bird Nest Below Canopy,Yellow
+NECOA,Neotropical Cormorant Adult,Black
+NECOC,Neotropical Cormorant Chick,Black
+NECOE,Neotropical Cormorant Egg,Black
+NECON,Neotropical Cormorant Nest,Black
+OSPRA,Osprey Adult,Black
+OTHRA,Other Bird,Fuchsia
+PBLTE,Black Tern,Yellow
+RBGUA,Ring-Billed Gull Adult,Green
+REEGA,Reddish Egret Adult,Red
+REEGC,Reddish Egret Chick,Red
+REEGF,Reddish Egret Flying,Red
+REEGJ,Reddish Egret Juvnile,Red
+REEGN,Reddish Egret Nest,Red
+REEGWMA,White Morph Reddish Egret Adult,Gray
+REEGWMF,White Morph Reddish Egret Flying,Gray
+REEGWMJ,White Morph Reddish Egret Juvenile,Gray
+REEGWMN,White Morph Reddish Egret Nest,Gray
+ROSPA,Roseate Spoonbill Adult,Fuchsia
+ROSPC,Roseate Spoonbill Chick,Fuchsia
+ROSPE,Roseate Spoonbill Egg,Fuchsia
+ROSPJ,Roseate Spoonbill Juvenile,Fuchsia
+ROSPN,Roseate Spoonbill Nest,Fuchsia
+ROTEA,Royal Tern Adult,Purple
+ROTENA,Royal Tern Nesting,Fuchsia
+ROTEC,Royal Tern Chick,Fuchsia
+ROTEC,Royal Tern Chick,Fuchsia
+RUTUA,Ruddy Turnstone Adult,Cyan
+SATEA,Sandwich Tern Adult,Yellow
+SATENA,Sandwich Tern Nesting,Lime
+SATEC,Sandwich Tern Chick,Lime
+SNEGA,Snowy Egret Adult,Pink
+SNEGC,Snowy Egret Chick,Pink
+SNEGN,Snowy Egret Nest,Pink
+TRASH,Trash/Debis,Black
+TRHEA,Tricolored Heron Adult,Purple
+TRHEC,Tricolored Heron Chick,White
+TRHEF,Tricolored Heron Flying,Purple
+TRHEJ,Tricolored Heron Juvenile,White
+TRHEN,Tricolored Heron Nest,White
+TUVUA,Turkey Vulture Adult,Black
+UNKWN,Unknown : Supervisor,Yellow
+WHIBA,White Ibis Adult,Navy
+WHIBC,White Ibis Chick,Navy
+WHIBJ,White Ibis Juvenile,Navy
+WHIBN,White Ibis Nest,Navy
+WHIBF,White Ibix Flying,Navy
+MTRNA,,Lime

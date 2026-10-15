@@ -3,6 +3,9 @@ upload_images_hf_batched.py
 
 Uploads large image directories to Hugging Face Hub using multi-file batch commits.
 Chunks by total payload size (~150 MB) to balance socket stability and HF commit limits.
+
+Supports --resume to skip files that already exist on the Hub (by path),
+making re-runs safe and avoiding unnecessary uploads / rate limits.
 """
 
 import argparse
@@ -36,6 +39,33 @@ def clean_repo(api: HfApi, repo_id: str, repo_type: str, revision: str):
         print(f"✓ Deleted {len(files_to_delete)} files in 1 commit.")
     else:
         print("Branch is already clean.")
+
+
+def get_existing_remote_files(api: HfApi, repo_id: str, repo_type: str, revision: str) -> set:
+    """Return a set of file paths already present on the Hub branch."""
+    try:
+        files = api.list_repo_files(repo_id=repo_id, repo_type=repo_type, revision=revision)
+        return set(files)
+    except Exception:
+        print("WARNING: Could not list remote files (repo may be empty). Assuming no existing files.")
+        return set()
+
+
+def filter_existing_files(all_files: list, existing_remote: set, local_dir: Path, path_in_repo: str) -> list:
+    """Filter out files that already exist on the Hub (matching by repo-relative path)."""
+    base = PurePosixPath(path_in_repo) if path_in_repo else PurePosixPath("")
+    to_upload = []
+    skipped = 0
+    for file_path in all_files:
+        rel_path = file_path.relative_to(local_dir)
+        repo_path = (base / rel_path).as_posix()
+        if repo_path in existing_remote:
+            skipped += 1
+        else:
+            to_upload.append(file_path)
+    if skipped:
+        print(f"  Skipping {skipped} files already on Hub (--resume)")
+    return to_upload
 
 
 def create_batches_by_size(all_files: list, target_bytes: int = TARGET_BATCH_BYTES):
@@ -78,6 +108,7 @@ def upload_batch(
     path_in_repo: str,
     target_mb: int = 150,
     clean_first: bool = False,
+    resume: bool = False,
 ):
     """Upload images in size-capped batches to avoid socket timeouts & HF commit limits."""
     api = HfApi()
@@ -93,10 +124,18 @@ def upload_batch(
         print("No files found.")
         return
 
+    # Resume: filter out files already on the Hub
+    if resume:
+        existing_remote = get_existing_remote_files(api, repo_id, repo_type, revision)
+        all_files = filter_existing_files(all_files, existing_remote, local_dir, path_in_repo)
+        if not all_files:
+            print("All files already exist on Hub. Nothing to upload.")
+            return
+
     target_bytes = target_mb * 1024 * 1024
     batches = create_batches_by_size(all_files, target_bytes=target_bytes)
     total_size_mb = sum(f.stat().st_size for f in all_files) / (1024 * 1024)
-    print(f"Found {len(all_files)} files ({total_size_mb:.1f} MB total).")
+    print(f"Found {len(all_files)} files to upload ({total_size_mb:.1f} MB total).")
     print(f"Grouped into {len(batches)} target-size batches (~{target_mb} MB/batch)...")
 
     for idx, chunk in enumerate(batches, 1):
@@ -166,6 +205,7 @@ def main():
     p.add_argument("--target-mb", type=int, default=150, help="Target batch payload size in MB")
     p.add_argument("--path-in-repo", default="Dataset", help="Path within the repo")
     p.add_argument("--clean-first", action="store_true", help="Delete existing repo files first")
+    p.add_argument("--resume", action="store_true", help="Skip files already on the Hub (match by path)")
 
     args = p.parse_args()
 
@@ -176,6 +216,8 @@ def main():
 
     print(f"Uploading {args.dataset_dir} to {args.repo_id} (branch: {args.branch})...")
     print(f"Target batch size: ~{args.target_mb} MB")
+    if args.resume:
+        print("Resume mode: will skip files already on the Hub")
 
     upload_batch(
         repo_id=args.repo_id,
@@ -185,6 +227,7 @@ def main():
         path_in_repo=args.path_in_repo,
         target_mb=args.target_mb,
         clean_first=args.clean_first,
+        resume=args.resume,
     )
 
 

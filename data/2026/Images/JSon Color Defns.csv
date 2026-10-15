@@ -1,0 +1,60 @@
+Species Code,Desc,Color
+AMAVA,American Avocet Adult,Lime
+AMOYA,American Oystercatcher,MoneyGreen
+AWPEA,American White Pelican,Purple
+BCNHA,Black-Crowned Night Heron Adult,Teal
+BCNHC,Black-Crowned Night Heron Chick,Teal
+BCNHJ,Black-Crowned Night Heron Juvenile,Teal
+BEKIA,Belted Kingfisher Adult,LtGray
+BLSKA,Black Skimmer Adult,Black
+BLSKC,Black Skimmer Chick,Black
+BNSTA,Black-necked Stilt,MoneyGreen
+BRPEA,Brown Pelican Adult,Red
+BRPEC,Brown Pelican Chick,Red
+CAEGA,Cattle Egret Adult,Silver
+CATEA,Capsian Tern Adult,Red
+CATEC,Caspian Tern Chick,Maroon
+CRCAA,Crested Caracara Adult,Black
+FOTEA,Forster's Tern Adult,Green
+GBHEA,Great Blue Heron Adult,Blue
+GBHEC,Great Blue Heron Chick,Blue
+GBHEF,Great Blue Heron Flying,Blue
+GBTEA,Gull-Billed Tern Adult,Blue
+GREGA,Great Egret Adult,MoneyGreen
+GREGC,Great Egret Chick,MoneyGreen
+GREGF,Great Egret Flying,MoneyGreen
+LAGUA,Laughing Gull Adult,Maroon
+LAGUC,Laughing Gull Chick,Red
+LBHEA,Little Blue Heron Adult,Yellow
+LWBAA,Large White Bird Adult Above Canopy,Red
+LWBAC,Large White Bird Chick Above Canopy,Red
+LWBBA,Large White Bird Adult Below Canopy,Yellow
+LWBBC,Large White Bird Chick Below Canopy,Yellow
+LWBBN,Large White Bird Nest Below Canopy,Yellow
+NECOA,Neotropical Cormorant Adult,Black
+NECOC,Neotropical Cormorant Chick,Black
+OSPRA,Osprey Adult,Black
+OTHRA,Other Bird,Fuchsia
+PBLTE,Black Tern,Yellow
+RBGUA,Ring-Billed Gull Adult,Green
+REEGA,Reddish Egret Adult,Red
+REEGC,Reddish Egret Chick,Red
+REEGWMA,White Morph Reddish Egret Adult,Gray
+REEGWMF,White Morph Reddish Egret Flying,Gray
+REEGWMJ,White Morph Reddish Egret Juvenile,Gray
+REEGWMN,White Morph Reddish Egret Nest,Gray
+ROSPA,Roseate Spoonbill Adult,Fuchsia
+ROSPC,Roseate Spoonbill Chick,Fuchsia
+ROTEA,Royal Tern Adult,Red
+ROTEC,Royal Tern Chick,Fuchsia
+RUTUA,Ruddy Turnstone Adult,Cyan
+SATEA,Sandwich Tern Adult,Red
+SATEC,Sandwich Tern Chick,MoneyGreen
+SNEGA,Snowy Egret Adult,Pink
+SNEGC,Snowy Egret Chick,Pink
+TRHEA,Tricolored Heron Adult,Purple
+TRHEC,Tricolored Heron Chick,White
+TUVUA,Turkey Vulture Adult,Black
+UNKWN,Unknown : Supervisor,Yellow
+WHIBA,White Ibis Adult,Navy
+WHIBC,White Ibis Chick,Navy
