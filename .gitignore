@@ -5,7 +5,15 @@ work_dirs/*
 data/**/*.jpg
 data/**/*.png
 data/**/*.json
+data/external/
+docs/external-eval/HANDOFF.md
+docs/external-eval/datasets.csv
 __pycache__/
+*.pyc
+*.part
+*.tmp
+.pytest_cache/
+.DS_Store
 *.egg-info/
 .venv/
 .env
@@ -13,3 +21,6 @@ __pycache__/
 .vscode/
 _prep/
 AUDIT.md
+
+# local agent/session notes
+AGENTS.md
