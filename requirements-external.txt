@@ -1,0 +1,9 @@
+# Optional environment for scripts/external/*.py.
+#
+# Do not install this into the training image: the detector environment is
+# pinned by requirements.lock.txt and Dockerfile.  Use a separate venv on the
+# host or a Runpod CPU/GPU instance for dataset preparation.
+pillow==10.4.0
+numpy==1.24.4
+rasterio>=1.3,<2
+gdown>=5
